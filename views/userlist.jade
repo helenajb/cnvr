@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each user, i in userlist
+            li #{user.username} : #{user.email}
+    a(href="/newuser")
+        button(type="button") Add user
